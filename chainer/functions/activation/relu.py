@@ -59,7 +59,7 @@ class ReLU(function.Function):
 def relu(x, use_cudnn=True):
     """Rectified Linear Unit function.
 
-     .. math::`f(x)=\\max(0, x)`.
+    .. math:: f(x)=\\max(0, x).
 
     Args:
         x (:class:`~chainer.Variable` or :class:`numpy.ndarray` or \
