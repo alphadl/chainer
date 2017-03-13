@@ -50,12 +50,12 @@ def leaky_relu(x, slope=0.2):
     Args:
         x (:class:`~chainer.Variable` or :class:`numpy.ndarray` or \
         :class:`cupy.ndarray`):
-            Input variable. A :math:`(s_1, s_2, ..., s_n)`-shaped float array.
+            Input variable. A :math:`(s_1, s_2, ..., s_N)`-shaped float array.
         slope (float): Slope value :math:`a`.
 
     Returns:
         ~chainer.Variable: Output variable. A
-        :math:`(s_1, s_2, ..., s_n)`-shaped float array.
+        :math:`(s_1, s_2, ..., s_N)`-shaped float array.
 
     .. admonition:: Example
 
@@ -64,7 +64,7 @@ def leaky_relu(x, slope=0.2):
         array([[-1.,  0.],
                [ 2., -3.],
                [-2.,  1.]], dtype=float32)
-        >>> F.leaky_relu(x).data
+        >>> F.leaky_relu(x, slope=0.2).data
         array([[-0.2       ,  0.        ],
                [ 2.        , -0.60000002],
                [-0.40000001,  1.        ]], dtype=float32)
