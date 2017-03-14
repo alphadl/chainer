@@ -60,7 +60,12 @@ class Softplus(function.Function):
 def softplus(x, beta=1.0):
     """Element-wise softplus function.
 
-    .. math:: f(x)=\\frac{1}{\\beta}\\log(1 + \\exp(\\beta x)).
+    The softplus function is the smooth approximation of ReLU.
+
+    .. math:: f(x)=\\frac{1}{\\beta}\\log(1 + \\exp(\\beta x)),
+
+    where :math:`\\beta` is a parameter. The function becomes curved
+    and akin to ReLU as the :math:`\\beta` is increasing.
 
     Args:
         x (:class:`~chainer.Variable` or :class:`numpy.ndarray` or \
@@ -77,7 +82,7 @@ def softplus(x, beta=1.0):
         >>> x = np.arange(-2, 3, 2).astype('f')
         >>> x
         array([-2.,  0.,  2.], dtype=float32)
-        >>> F.softplus(x).data
+        >>> F.softplus(x, beta=1.0).data
         array([ 0.126928  ,  0.69314718,  2.12692809], dtype=float32)
 
     """
