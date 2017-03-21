@@ -69,6 +69,8 @@ def hard_sigmoid(x):
 
     .. admonition:: Example
 
+        It maps the input values into the range of :math:`[0, 1]`.
+
         >>> x = np.array([-2.6, -1, 0, 1, 2.6])
         >>> x
         array([-2.6, -1. ,  0. ,  1. ,  2.6])
